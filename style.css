@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #1e1e1e, #121212); /* Gradient background */
+}
+
+.container {
+    text-align: center;
+    background: rgba(30, 30, 30, 0.9); /* Slightly transparent dark container */
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    width: 400px; /* Fixed width for better layout */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* Light color for heading */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    background: linear-gradient(145deg, #3b3b3b, #2c2c2c); /* Gradient for squares */
+    border: 3px solid #444; /* Slightly lighter border */
+    border-radius: 15px; /* Rounded corners for squares */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    color: #ffffff; /* White text for visibility */
+}
+
+.square:hover {
+    background: linear-gradient(145deg, #4a4a4a, #3b3b3b); /* Darker gradient on hover */
+    transform: scale(1.05); /* Slightly enlarges square on hover */
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff4081, #ff1f5a); /* Bright gradient for the button */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff1f5a, #ff4081); /* Reverse gradient on hover */
+    transform: scale(1.05);
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #76ff03; /* Bright green for win message */
+}
